@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/rest_dev/getClient/:id" method="GET">
+        <service class="JNTwo\LicensePlate\Api\ClientRepositoryInterface" method="getClientById" />
+        <resources>
+            <!-- <resource ref="JNTwo_LicensePlate::licenses_get_client_info" /> -->
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/rest_dev/updateClient/:id" method="PUT">
+        <service class="JNTwo\LicensePlate\Api\ClientRepositoryInterface" method="updateClient" />
+        <resources>
+           <!-- <resource ref="JNTwo_LicensePlate::licenses_update_client" /> -->
+           <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/rest_dev/createClient" method="POST">
+        <service class="JNTwo\LicensePlate\Api\ClientRepositoryInterface" method="createClient" />
+        <resources>
+           <!-- <resource ref="JNTwo_LicensePlate::licenses_create_client" /> -->
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/rest_dev/deleteClient/:id" method="DELETE">
+        <service class="JNTwo\LicensePlate\Api\ClientRepositoryInterface" method="deleteClient" />
+        <resources>
+           <!-- <resource ref="JNTwo_LicensePlate::licenses_delete_client" /> -->
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/rest_dev/searchByLicenseEndPlate/:number" method="GET">
+        <service class="JNTwo\LicensePlate\Api\ClientRepositoryInterface" method="searchByLicenseEndPlate" />
+        <resources>
+           <!-- <resource ref="JNTwo_LicensePlate::licenses_search_by_license_end_plate" /> -->
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

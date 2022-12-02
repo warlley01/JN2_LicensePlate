@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="JNTwo_LicensePlate::licenses" title="Dev API - Products"
+                          translate="title" sortOrder="110">
+                    <resource id="JNTwo_LicensePlate::licenses_create_client" title="Create Client"
+                              translate="title" sortOrder="10" />
+                    <resource id="JNTwo_LicensePlate::licenses_update_client" title="Update Client"
+                              translate="title" sortOrder="20" />
+                    <resource id="JNTwo_LicensePlate::licenses_delete_client" title="Delete Client"
+                              translate="title" sortOrder="30" />
+                    <resource id="JNTwo_LicensePlate::licenses_get_client_info" title="Get Client Info"
+                              translate="title" sortOrder="40" />
+                    <resource id="JNTwo_LicensePlate::licenses_search_by_license_end_plate" title="Search Clients By License end plate"
+                              translate="title" sortOrder="50" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
